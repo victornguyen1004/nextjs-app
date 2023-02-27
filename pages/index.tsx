@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <html className="font-mavenpro">
+      <div className="font-mavenpro">
         <div className="flex justify-between items-center px-global py-4 font-semibold">
           <Link
             href="/"
@@ -48,7 +48,7 @@ export default function Home() {
           <div className="w-full"></div>
           <div className="w-full"></div>
         </div>
-      </html>
+      </div>
     </>
   );
 }
