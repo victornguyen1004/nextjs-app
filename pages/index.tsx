@@ -15,7 +15,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="font-mavenpro">
+<<<<<<< HEAD
         <div className="flex justify-between items-center px-global py-6 font-semibold">
+=======
+        <div className="flex justify-between items-center px-global py-4 font-semibold">
+>>>>>>> 861664c7618915a9c5c2a11cb717076035b6193d
           <Link
             href="/"
             className="text-accent font-mavenpro font-black text-lg"
