@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
@@ -13,84 +12,50 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <script
+          src="https://kit.fontawesome.com/f6f851698f.js"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
-      <div className="font-mavenpro">
-<<<<<<< HEAD
-        <div className="flex justify-between items-center px-global py-6 font-semibold">
-=======
-        <div className="flex justify-between items-center px-global py-4 font-semibold">
->>>>>>> 861664c7618915a9c5c2a11cb717076035b6193d
-          <Link
-            href="/"
-            className="text-accent font-mavenpro font-black text-lg"
-          >
-            DALATBUS
-          </Link>
-          <nav className="text-primary font-mavenpro">
-            <Link
-              href="/"
-              className="mx-2 px-4 py-2 hover:text-[#5c7c9f] duration-200"
-            >
-              Trang chủ
-            </Link>
-            <Link
-              href="/contact"
-              className="mx-2 px-4 py-2 hover:text-[#5c7c9f] duration-200"
-            >
-              Thông tin
-            </Link>
-            <Link
-              href="/contact"
-              className="mx-2 px-4 py-2 hover:text-[#5c7c9f] duration-200"
-            >
-              Liên hệ
-            </Link>
-          </nav>
-          <div className="">
-            <Link
-              href="/"
-              className="mx-2 py-3 px-5 text-primary hover:text-[#5c7c9f] duration-200"
-            >
-              Đăng nhập
-            </Link>
-            <Link
-              href="/"
-              className="mx-2 py-3 px-6 rounded-lg bg-accent border-2 border-accent hover:bg-white duration-200 hover:text-accent text-white"
-            >
-              Đăng ký
-            </Link>
-          </div>
-        </div>
-        <div className="mx-4 px-24 py-8 flex flex-row justify-between bg-background rounded-2xl">
-          <div className="w-full text-primary flex flex-col justify-center">
-            <p className="text-3xl font-bold">Chào mừng đến</p>
-            <h1 className="text-8xl font-[900] mt-2 font-sans">ĐÀ LẠT</h1>
-            <p className="mt-6 font-semibold">
-              Tra cứu thông tin các tuyến xe buýt <br /> tại Đà Lạt để lựa chọn
-              lộ trình phù hợp nhất
-            </p>
-            <div className="mt-6 flex justify-between bg-white p-2 shadow-lg border rounded-[36px] z-10 -mr-32">
-              <div className="">
-                <input
-                  type="text"
-                  className="placeholder:text-primary py-2 px-4 bg-background rounded-3xl outline-0"
-                  placeholder="Địa điểm"
-                />
-              </div>
+
+      {/* Start of Homepage */}
+      <div className="font-mono">
+        <div
+          className="relative h-[560px] whitespace-nowrap"
+          style={{
+            backgroundImage: "url(/banner.png)",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <Navbar />
+          <div className="flex items-center justify-center flex-col h-[calc(100%-200px)]">
+            <h1 className="font-bold text-4xl  text-primary">
+              Tra cứu tuyến xe buýt tại Đà Lạt
+            </h1>
+            <h2 className="text-primary mt-2 font-semibold">
+              Xem thông tin chi tiết, thời gian, tuyến đường, trạm dừng.
+            </h2>
+            <div className="flex justify-between w-full min-w-[600px] mt-4 rounded-[48px] max-w-[800px] bg-primary relative shadow-lg">
+              <i className="absolute top-3.5 left-4 text-2xl text-textcolor fa-solid fa-magnifying-glass"></i>
               <input
                 type="text"
-                className="py-2 px-4 bg-background placeholder:text-primary rounded-3xl outline-0"
-                placeholder="Điểm đến"
+                className="outline-0 text-altprimary font-semibold text-lg w-full px-16 py-4 placeholder:text-lg  placeholder:font-semibold bg-transparent"
+                placeholder="Nhập tên tuyến cần tìm..."
               />
+              <button className="px-12 m-1 whitespace-nowrap bg-accent text-primary font-bold rounded-[48px]">
+                Tìm kiếm
+              </button>
             </div>
           </div>
-          <div className="w-full">
-            <Image
-              src="/banner.png"
-              width="700"
-              height="600"
-              alt="banner.png"
-            />
+        </div>
+        <div className="bg-primary h-screen relative z-5 rounded-[48px] -mt-12 px-global py-12 text-secondary">
+          <div className="w-[120px] absolute -top-12 right-12">
+            <img src="/scrolldown.png" alt="scrolldown.png" />
+          </div>
+          <div className="text-center text-accent font-black text-2xl">
+            Danh sách các tuyến xe buýt
           </div>
         </div>
       </div>

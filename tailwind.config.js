@@ -11,14 +11,16 @@ module.exports = {
         global: "112px",
       },
       colors: {
-        primary: "#00326C",
-        secondary: "#84B9E0",
-        accent: "#EC2D47",
-        background: "#F4F8FB",
+        primary: "#F5F4ED",
+        secondary: "#9E927A",
+        accent: "#F0582B",
+        altprimary: "#EAB855",
+        textcolor: "#312D1B",
       },
       fontFamily: {
-        'mavenpro': ['Maven Pro', 'sans-serif'],
-      }
+        sans: ["Poppins", "sans-serif"],
+        mono: ["IBM Plex Mono", "monospace"],
+      },
     },
   },
   plugins: [],
