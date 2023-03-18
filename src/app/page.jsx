@@ -53,7 +53,7 @@ export default function HomePage({routes}) {
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch('http://localhost:3000/api/routes');
   const routes = await res.json();
   
