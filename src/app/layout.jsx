@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className="scrollbar-thumb-gray-400 scrollbar-thin scrollbar-thumb-rounded scrollbar-track-transparent"
+      className="overflow-overlay scrollbar-thumb-gray-400 scrollbar-thin scrollbar-thumb-rounded scrollbar-track-transparent"
     >
       <body>
         {children}

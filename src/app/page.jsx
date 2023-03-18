@@ -7,16 +7,10 @@ export const metadata = {
   description: "Trang chủ của DALATBUS",
 };
 
-
-
-
-export default function HomePage({routes}) {
+export default function HomePage({ routes }) {
   return (
     <>
-      <Script
-        src="https://kit.fontawesome.com/f6f851698f.js"
-        async
-      ></Script>
+      <Script src="https://kit.fontawesome.com/f6f851698f.js" async></Script>
       {/* Start of Homepage */}
       <Container>
         <Navbar />
@@ -42,28 +36,17 @@ export default function HomePage({routes}) {
       </Container>
       {/* Content Section */}
       <div className="bg-primary h-screen relative z-5 rounded-[48px] -mt-12 px-global py-12 text-secondary">
-        <div className="grid grid-cols-12 ">          
+        <div className="grid grid-cols-12 ">
           {routes?.map((route) => {
-            return <div key={route.id} className="col-span-6">{route.route}</div>
+            return (
+              <div key={route.id} className="col-span-6">
+                {route.route}
+              </div>
+            );
           })}
         </div>
       </div>
     </>
   );
 }
-
-
-export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/routes');
-  const routes = await res.json();
-  
-  return {
-    props: { 
-      routes, 
-    },
-  }
-}
-
-
-
 
