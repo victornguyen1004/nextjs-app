@@ -1,27 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       spacing: {
         global: "112px",
       },
       colors: {
-        primary: "#F5F4ED",
-        secondary: "#9E927A",
-        accent: "#F0582B",
-        altprimary: "#EAB855",
+        primary: "#f4f8fb",
+        secondary: "#00326c",
+        accent: "#ec2d47",
+        altsecondary: "#84b9e0",
         textcolor: "#312D1B",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
-        mono: ["IBM Plex Mono", "monospace"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
 };
