@@ -1,4 +1,4 @@
-import UserAction from "../UserAction";
+import UserAction from "./UserAction";
 import { Navlinks } from "./Navlinks";
 
 export default function Navbar() {
