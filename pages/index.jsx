@@ -1,6 +1,9 @@
-import Head from 'next/head'
-import Container from '@/components/Container';
-import Navbar from '@/components/Navbar';
+import Head from "next/head";
+import HeaderContainer from "@/components/Container/HeaderContainer";
+import Navbar from "@/components/Navbar";
+import Route from "@/components/Route";
+
+// https://www.youtube.com/watch?v=btHsYY8I6Z0
 
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:3000/api/routes");
@@ -8,7 +11,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      routes: data
+      routes: data,
     },
   };
 };
@@ -23,10 +26,10 @@ const Home = ({ routes }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* Start of Homepage */}
-      <Container>
+      <HeaderContainer>
         <Navbar />
-        <div className="flex items-center justify-center flex-col h-[calc(100%-200px)]">
-          <h1 className="font-bold text-3xl text-primary">
+        <div className="absolute top-0 left-0 flex items-center justify-center flex-col w-full h-full">
+          <h1 className="font-bold md:text-3xl text-xl text-primary">
             CỔNG THÔNG TIN XE BUÝT ĐÀ LẠT
           </h1>
           <h2 className="text-primary mt-2 font-semibold">
@@ -44,51 +47,20 @@ const Home = ({ routes }) => {
             </button>
           </div>
         </div>
-      </Container>
+      </HeaderContainer>
       {/* Content Section */}
-      <div className="bg-primary relative z-5 rounded-[48px] -mt-12 px-global py-12 text-secondary">
-        <h4 className="text-2xl font-bold">Danh sách các tuyến xe</h4>
-        <div className="grid grid-cols-12 gap-8 mt-8">
-          {routes.map(route => {
-            return (
-              <a
-                key={route.id}
-                className="col-span-3 group relative shadow-md border rounded-xl overflow-hidden"
-                href="/"
-              >
-                {/* For modal layout */}
-                <div className="absolute flex justify-center items-center w-full h-full bg-[rgba(24,24,27,0.0)] group-hover:bg-[rgba(24,24,27,0.8)] duration-200 group-hover: z-[50] top-0 left-0 ">
-                  <button className="text-white opacity-0 group-hover:opacity-100 duration-200 px-4 py-2 border-2 rounded-lg font-semibold border-white">
-                    Xem chi tiết
-                  </button>
-                </div>
-                <div className="overflow-hidden relative">
-                  <img
-                    src="/bus.jpg"
-                    alt=""
-                    className="group-hover:scale-110 duration-200 "
-                  />
-                </div>
-                <div className="bg-white p-4  flex flex-col justify-between">
-                  <h5 className="text-lg font-semibold min-h-[56px]">
-                    {route.name}
-                  </h5>
-                  <div className="">
-                    
-                  </div>
-                  {/* <button className="bg-accent group-hover:opacity-90 border shadow flex items-center justify-center text-white font-semibold p-2 rounded-xl">
-                    Xem chi tiết
-                    <i class="fa-solid duration-100 ease-in-out fa-up-right-from-square text-white pl-2"></i>
-                  </button> */}
-                </div>
-              </a>
-            );
-          })}
+        <div className="bg-primary relative z-5 rounded-[48px] lg:px-global px-small -mt-12 py-12 text-secondary">
+          <h4 className="text-2xl font-bold">Danh sách các tuyến xe</h4>
+          <div className="grid grid-cols-12 gap-8 mt-8">
+            {routes.map((route) => {
+              return (
+                <Route id={route.id} name={route.name} desc={route.desc} />
+              );
+            })}
+          </div>
         </div>
-      </div>
     </>
   );
-}
+};
 
 export default Home;
-

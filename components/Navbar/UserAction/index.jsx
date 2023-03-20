@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function UserAction() {
   return (
-    <div className="">
+    <div className="hidden md:inline-block">
       <Link href="/" className="mx-2 py-3 px-5 duration-200 hover:text-accent">
         Đăng nhập
       </Link>

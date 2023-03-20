@@ -1,4 +1,4 @@
-import Container from "@/components/Container";
+import HeaderContainer from "@/components/Container/HeaderContainer";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
 
@@ -11,9 +11,9 @@ export default function ContactPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
+      <HeaderContainer>
         <Navbar />
-      </Container>
+      </HeaderContainer>
     </>
   );
 }
