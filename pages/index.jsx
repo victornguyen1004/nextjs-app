@@ -54,7 +54,7 @@ const Home = ({ routes }) => {
           <div className="grid grid-cols-12 gap-8 mt-8">
             {routes.map((route) => {
               return (
-                <Route id={route.id} name={route.name} desc={route.desc} />
+                <Route key={route.id} id={route.id} name={route.name} desc={route.desc} />
               );
             })}
           </div>

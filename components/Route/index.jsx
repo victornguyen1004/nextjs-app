@@ -1,9 +1,10 @@
+import Link from "next/link";
+
 export default function Route(props) {
     return (
-      <a
-        key={props.id}
+      <Link
         className="col-span-3 group relative shadow-md border rounded-xl overflow-hidden"
-        href="/"
+        href={'routes/' + props.id}
       >
         {/* For modal layout */}
         <div className="absolute flex justify-center items-center w-full h-full bg-[rgba(24,24,27,0.0)] group-hover:bg-[rgba(24,24,27,0.8)] duration-200 group-hover: z-[50] top-0 left-0 ">
@@ -28,6 +29,6 @@ export default function Route(props) {
                       <i class="fa-solid duration-100 ease-in-out fa-up-right-from-square text-white pl-2"></i>
                     </button> */}
         </div>
-      </a>
+      </Link>
     );
 }
