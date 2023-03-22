@@ -28,7 +28,7 @@ const Home = ({ routes }) => {
       {/* Start of Homepage */}
       <HeaderContainer>
         <Navbar />
-        <div className="absolute top-0 left-0 flex items-center justify-center flex-col w-full h-full">
+        <div className="translate-y-2/3 flex items-center justify-center flex-col ">
           <h1 className="font-bold md:text-3xl text-xl text-primary">
             CỔNG THÔNG TIN XE BUÝT ĐÀ LẠT
           </h1>
@@ -49,16 +49,21 @@ const Home = ({ routes }) => {
         </div>
       </HeaderContainer>
       {/* Content Section */}
-        <div className="bg-primary relative z-5 rounded-[48px] lg:px-global px-small -mt-12 py-12 text-secondary">
-          <h4 className="text-2xl font-bold">Danh sách các tuyến xe</h4>
-          <div className="grid grid-cols-12 gap-8 mt-8">
-            {routes.map((route) => {
-              return (
-                <Route key={route.id} id={route.id} name={route.name} desc={route.desc} />
-              );
-            })}
-          </div>
+      <div className="bg-primary relative z-5 rounded-[48px] lg:px-global px-small -mt-12 py-12 text-secondary">
+        <h4 className="text-2xl font-bold">Danh sách các tuyến xe</h4>
+        <div className="grid grid-cols-12 gap-8 mt-8">
+          {routes.map((route) => {
+            return (
+              <Route
+                key={route.id}
+                id={route.id}
+                name={route.name}
+                desc={route.desc}
+              />
+            );
+          })}
         </div>
+      </div>
     </>
   );
 };
