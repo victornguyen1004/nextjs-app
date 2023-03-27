@@ -59,6 +59,7 @@ const Home = ({ routes }) => {
                 id={route.id}
                 name={route.name}
                 desc={route.desc}
+                imgUrl={route.imgUrl}
               />
             );
           })}

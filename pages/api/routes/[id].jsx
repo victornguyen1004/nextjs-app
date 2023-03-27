@@ -1,55 +1,4 @@
-const routes = [
-  {
-    id: 0,
-    name: "Đà Lạt – Đức Trọng",
-    desc: "Tuyến xe từ Đà Lạt tới bla bla với mã số chuyến xe là 12345 và số giãn cách",
-  },
-  {
-    id: 1,
-    name: "Đà Lạt – Đơn Dương",
-    desc: "Tuyến xe từ Đà Lạt tới bla bla với mã số chuyến xe là 12345 và số giãn cách",
-  },
-  {
-    id: 2,
-    name: "Đà Lạt – Lạc Dương",
-    desc: "Tuyến xe từ Đà Lạt tới bla bla với mã số chuyến xe là 12345 và số giãn cách",
-  },
-  {
-    id: 3,
-    name: "Đà Lạt – Bảo Lộc",
-    desc: "Tuyến xe từ Đà Lạt tới bla bla với mã số chuyến xe là 12345 và số giãn cách",
-  },
-  {
-    id: 4,
-    name: "Đà Lạt – Xuân Trường",
-    desc: "Tuyến xe từ Đà Lạt tới bla bla với mã số chuyến xe là 12345 và số giãn cách",
-  },
-  {
-    id: 5,
-    name: "Đà Lạt – Phú Sơn",
-    desc: "Tuyến xe từ Đà Lạt tới bla bla với mã số chuyến xe là 12345 và số giãn cách",
-  },
-  {
-    id: 6,
-    name: "Liên nghĩa – Tân Thanh",
-    desc: "Tuyến xe từ Đà Lạt tới bla bla với mã số chuyến xe là 12345 và số giãn cách",
-  },
-  {
-    id: 7,
-    name: "Đà Lạt – Liên Khương",
-    desc: "Tuyến xe từ Đà Lạt tới bla bla với mã số chuyến xe là 12345 và số giãn cách",
-  },
-  {
-    id: 8,
-    name: "Đà Lạt – Đại Lào",
-    desc: "Tuyến xe từ Đà Lạt tới bla bla với mã số chuyến xe là 12345 và số giãn cách",
-  },
-  {
-    id: 9,
-    name: "Đà Lạt – Thái Phiên",
-    desc: "Tuyến xe từ Đà Lạt tới bla bla với mã số chuyến xe là 12345 và số giãn cách",
-  },
-];
+import { routes } from "./data";
 
 export default function handler(req, res) {
   const { id }= req.query;
@@ -57,3 +6,17 @@ export default function handler(req, res) {
   const resultId = routeId.id;
   res.status(200).json(routes.at(resultId));
 }
+
+
+// route: [
+//       "Bến xe buýt đường Mai Anh Đào, P8, Đà Lạt",
+//       "Đường Phù Đổng Thiên Vương",
+//       "Đường Nguyễn Thái Học",
+//       "Đường Lê Đại Hành",
+//       "Khu Hòa Bình",
+//       "Đường 3/2",
+//       "Đường Trần Phú",
+//       "Đường 3/4",
+//       "Quốc lộ 20",
+//       "Bến xe Đức Trọng",
+//     ],
