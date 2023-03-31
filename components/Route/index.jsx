@@ -21,8 +21,8 @@ export default function Route(props) {
           />
         </div>
 
-        <div className="bg-white border-t-4 border-secondary p-4  flex flex-col justify-between">
-          <h5 className="text-lg font-semibold mb-1">{props.name}</h5>
+        <div className="bg-white border-t-4 border-secondary p-4 min-h-[144px] flex flex-col justify-between">
+          <h5 className="text-lg font-bold mb-1">{props.name}</h5>
           <div className="line-clamp-2 text-ellipsis">{props.desc}</div>
         </div>
       </Link>

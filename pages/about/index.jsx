@@ -13,6 +13,9 @@ export default function AboutPage() {
       </Head>
       <HeaderContainer>
         <Navbar />
+        <div className="px-14 mx-global rounded-t-3xl text-secondary bg-primary">
+dadasdsa
+</div>
       </HeaderContainer>
     </>
   );

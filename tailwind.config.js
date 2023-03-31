@@ -15,11 +15,9 @@ module.exports = {
         primary: "#f4f8fb",
         secondary: "#00326c",
         accent: "#ec2d47",
+        darkersecondary: "#002551",
         altsecondary: "#84b9e0",
         textcolor: "#312D1B",
-      },
-      fontFamily: {
-        sans: ["Poppins", "sans-serif"],
       },
     },
   },

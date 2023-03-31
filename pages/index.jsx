@@ -2,13 +2,11 @@ import Head from "next/head";
 import HeaderContainer from "@/components/Container/HeaderContainer";
 import Navbar from "@/components/Navbar";
 import Route from "@/components/Route";
-
-// https://www.youtube.com/watch?v=btHsYY8I6Z0
+import Footer from "@/components/Footer";
 
 export const getStaticProps = async () => {
   const res = await fetch("http://localhost:3000/api/routes");
   const data = await res.json();
-
   return {
     props: {
       routes: data,
@@ -25,7 +23,7 @@ const Home = ({ routes }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* Start of Homepage */}
+      {/* HeaderSection */}
       <HeaderContainer>
         <Navbar />
         <div className="translate-y-2/3 flex items-center justify-center flex-col ">
@@ -49,9 +47,10 @@ const Home = ({ routes }) => {
         </div>
       </HeaderContainer>
       {/* Content Section */}
-      <div className="bg-primary relative z-5 rounded-[48px] lg:px-global px-small -mt-12 py-12 text-secondary">
+      <div className="bg-primary relative z-5 rounded-t-[48px] lg:px-global px-small -mt-12 pt-14 pb-32 text-secondary">
         <h4 className="text-2xl font-bold">Danh sách các tuyến xe</h4>
-        <div className="grid grid-cols-12 gap-8 mt-8">
+        <p className="text-lg mt-2 text-secondary">Các tuyến xe đang hoạt động tại địa bàn thành phố Đà Lạt</p>
+        <div className="grid grid-cols-12 gap-8 mt-12">
           {routes.map((route) => {
             return (
               <Route
@@ -65,6 +64,8 @@ const Home = ({ routes }) => {
           })}
         </div>
       </div>
+      {/* Footer Section */}
+      <Footer />
     </>
   );
 };
