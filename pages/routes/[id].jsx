@@ -1,6 +1,7 @@
 import HeaderContainer from "@/components/Container/HeaderContainer";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 
 export const getStaticPaths = async () => {
   const res = await fetch("http://localhost:3000/api/routes/");
@@ -20,7 +21,9 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
+  // const hostname = context.req.headers.host;
   const res = await fetch("http://localhost:3000/api/routes/" + id);
+  // const res = await fetch("http://" + hostname + "/api/routes/" + id);
   const data = await res.json();
 
   return {
@@ -40,9 +43,11 @@ export default function Details({ route }) {
               <h2 className="text-3xl font-bold">{route.name}</h2>
               <div className="relative mt-8 z-10">
                 <div className="w-full h-full absolute rounded-3xl top-0 -z-[1] left-0 translate-x-3 translate-y-3 bg-accent"></div>
-                <img
+                <Image
                   src={`/${route.imgUrl}`}
                   alt=""
+                  width={600}
+                  height={600}
                   className="rounded-3xl border-4 border-secondary "
                 />
               </div>

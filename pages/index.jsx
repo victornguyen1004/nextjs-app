@@ -49,7 +49,9 @@ const Home = ({ routes }) => {
       {/* Content Section */}
       <div className="bg-primary relative z-5 rounded-t-[48px] lg:px-global px-small -mt-12 pt-14 pb-32 text-secondary">
         <h4 className="text-2xl font-bold">Danh sách các tuyến xe</h4>
-        <p className="text-lg mt-2 text-secondary">Các tuyến xe đang hoạt động tại địa bàn thành phố Đà Lạt</p>
+        <p className="text-lg mt-2 text-secondary">
+          Các tuyến xe đang hoạt động tại địa bàn thành phố Đà Lạt
+        </p>
         <div className="grid grid-cols-12 gap-8 mt-12">
           {routes.map((route) => {
             return (
