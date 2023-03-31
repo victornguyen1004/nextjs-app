@@ -14,8 +14,8 @@ export default function AboutPage() {
       <HeaderContainer>
         <Navbar />
         <div className="px-14 mx-global rounded-t-3xl text-secondary bg-primary">
-dadasdsa
-</div>
+          dadasdsa
+        </div>
       </HeaderContainer>
     </>
   );

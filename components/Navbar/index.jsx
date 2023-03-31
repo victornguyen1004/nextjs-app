@@ -1,5 +1,6 @@
 import UserAction from "./UserAction";
 import { Navlinks } from "./Navlinks";
+import Link from "next/link";
 
 export default function Navbar() {
   // const activeNavbarItemStyles =
@@ -10,15 +11,15 @@ export default function Navbar() {
     <div
       className={`flex justify-between bg-transparent text-primary items-center px-small lg:px-global py-6 font-semibold`}
     >
-      <a href="/" className="font-black text-2xl">
+      <Link href="/" className="font-black text-2xl">
         DALATBUS
-      </a>
+      </Link>
       <nav className="">
         {Navlinks.map((link, index) => {
           return (
-            <a key={index} href={link.path} className={navlinkStyles}>
+            <Link key={index} href={link.path} className={navlinkStyles}>
               {link.name}
-            </a>
+            </Link>
           );
         })}
       </nav>

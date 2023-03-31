@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Route(props) {
     return (
@@ -14,9 +15,11 @@ export default function Route(props) {
         </div>
 
         <div className="overflow-hidden relative">
-          <img
-            src={`${props.imgUrl}`}
+          <Image
+            src={`/${props.imgUrl}`}
             alt=""
+            width={400}
+            height={400}
             className="group-hover:scale-110 duration-200"
           />
         </div>
